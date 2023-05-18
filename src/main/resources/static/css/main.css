@@ -1,0 +1,471 @@
+  html,body{
+overflow-x: hidden; overflow-y: auto;
+	  font-family:Ubuntu,kaiti, Verdana,sans-serif ,'Gudea';  
+  }
+  /*表单自动填充背景色去除*/
+  input:-webkit-autofill {
+      -webkit-animation: autofill-fix1 1s infinite; /**利用动画方式将背景图遮挡住*/
+      -webkit-text-fill-color: #FFFFFF !important;
+      transition: background-color 5000s ease-in-out 0s;
+      /**字体颜色可按需求定义*/
+  }
+
+  .qh_title{
+	  width: 100%;
+	  height: 85px;
+
+	  background: #3c3131cc;
+
+      display: flex;
+	  opacity: 0.8;
+	  filter: alpha(opacity=80);
+      float: left;
+      z-index: -6;
+  }
+
+  .qh_title_h2{
+	  line-height: 85px;
+	  font-size: 2.8rem;
+	  margin: 0 auto;
+      user-select: none;
+  }
+  /*iframe*/
+  .ifr,.ifrcj,.ifrjs,.ifrwl{
+      position:absolute;
+      top: 148px;
+      height: 100%;
+      width: 100%;
+      display: none;
+
+  }
+
+  /* 公司背景 */
+  .com_h2 {
+  	  display: block;
+  	  text-align: center !important;
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    
+  }
+ 
+  /* 公司介绍 */
+  
+  .third {
+user-select: none;
+      width: 100%;
+      height: auto;
+      display: inline;
+  }
+  .third .layui-anim-up2{
+      text-shadow: 0.5px 0.5px #f64cdda8;
+      color: aquamarine;
+      font-size: 24px;
+      background-color: #44607d9e;
+      padding: 20px 32px;
+      margin: 0 auto;
+      border-radius: 50px;
+      float: right;
+      box-shadow: 4px -4px #7a8790e0;
+      padding-left: 32px;
+      width: 640px;
+  }
+
+  .third .layui-anim-up3{
+      text-shadow: 0.5px 0.5px #f64cdda8;
+      color: #f8f8f4;
+      font-size: 24px;
+      background-color: #4b79b39e;
+      padding: 20px 32px;
+      margin-top: 30px;
+      border-radius: 50px;
+      box-shadow: -4px -4px #3ed7d0e3;
+      padding-left:32px;
+      width: 640px;
+  }
+  .layui-anim-up4{
+      text-shadow: 0.5px 0.5px #f64cdda8;
+      color: aquamarine;
+      font-size: 24px;
+      background-color: #44607d9e;
+      padding: 20px 32px;
+      margin: 0 auto;
+      border-radius: 50px;
+      float: right;
+      box-shadow: 4px -4px #7a8790e0;
+      padding-left: 32px;
+      width: 640px;
+  }
+  .layui-anim-up5{
+      text-shadow: 0.5px 0.5px #f64cdda8;
+      color: #f8f8f4;
+      font-size: 24px;
+      background-color:#4b79b39e;
+      padding: 20px 32px;
+      margin: 0 auto;
+      margin-right: 50%;
+      margin-top: 30px;
+      border-radius: 50px;
+      margin-left: 20px;
+
+      width: 640px;
+      box-shadow: -4px -4px #3ed7d0e3; padding-left:32px;
+  }
+  .second .layui-anim-upbit {
+      text-shadow:  0.5px 0.5px #f64cdda8;
+      color: #f8f8f4;
+      width: 640px;
+      font-size: 24px;
+      background-color: #4b79b39e;
+      padding: 20px 32px;
+      margin: 0 auto;
+      margin-right: 50%;
+      margin-top: 30px;
+      border-radius: 50px;
+      margin-left: 20px;
+      box-shadow: -4px -4px #3ed7d0e3;
+  }
+ /*.second .layui-anim-upbit{*/
+	/*  font-size: 18px;*/
+	/*  color:#f2db24;*/
+	/*  padding:20px 32px;*/
+	/*  margin: 0 auto;*/
+ /* }*/
+  .layui-icon-flag,.layui-icon-release,.layui-icon-read,.layui-icon-diamond,.layui-icon-dollar{
+	 font-size: 50px; 
+  }
+
+  /* 公司部门 */
+  .mianban {
+      position: relative;
+      top: 20px;
+      width: 996px;
+      color: #fff;
+      margin: 0 auto;
+  }
+  .mianban h3{
+      text-align: center;
+  }
+      .mianban_1{
+      font-size: 24px;
+      color: aquamarine;
+      margin: 0 auto;
+      float: none;
+      width: 100%;
+  }
+  .mianban .div1,.mianban .div3{
+      -moz-box-shadow: -10px 10px 10px #61a8e1;
+      box-shadow: -10px 10px 10px #61a8e1;
+  }
+  .mianban .div2,.mianban .div4{
+      -moz-box-shadow: 10px 10px 10px #61a8e1;
+      box-shadow: 10px 10px 10px #61a8e1;
+  }
+  .mianban .div1,.mianban .div2, .mianban .div3, .mianban .div4  {
+      float: left;
+      width: 445px;
+      height: 254px;
+      padding: 14px;
+      border-radius: 20px;
+      font-size: 22px;
+      user-select: none;
+      background-color: rgb(71 105 126 / 55%);
+      margin-right: 36px;
+      margin-bottom: 10px;
+  }
+
+
+
+
+  #home-video {
+      float: left;
+      z-index: 999;
+      /*z-index: 100;*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: fill;/*这里是关键*/
+      width: 100%;
+      height: 124%;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background-size: cover;
+  }
+
+   .barrier{
+       width: 100%;
+       height: 100%;
+       opacity: 0;
+       float: left;
+       position: fixed;
+       z-index: 1000;
+       display: none;
+   }
+   /*.nxo{*/
+   /*    height: 100%;*/
+   /*    position: fixed;*/
+   /*    width: 100%;*/
+   /*    */
+   /*    overflow: hidden;*/
+   /*}*/
+  .barrier_black{
+      width: 100%;
+      height: 100%;
+      float: left;
+      position: fixed;
+      z-index: 80;
+      background-color: black;
+  }
+     .main_sign_up{
+   			  height: 100%;
+
+
+   		  }
+  span {
+            color: inherit;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+        }
+
+        * {
+            box-sizing: border-box;
+            -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -icab-box-sizing: border-box;
+            -khtml-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        * {
+            outline: 0;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-main .nav-span .nav-active, .datav-nav .nav-main .nav-span .nav-link:hover {
+            color: #00baff !important;
+        }
+
+        .nav-main .nav-span .nav-link {
+            text-decoration: none !important;
+            display: block;
+            color: #fff;
+            width: auto;
+            min-width: 140px;
+            line-height: 58px;
+            font-size: 1.2em;
+            text-align: left;
+            cursor: pointer;
+            padding: 0 40px;
+        }
+
+        .datav-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .datav-font {
+            font-family: "datav-font" !important;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .nav-main .nav-icon {
+            padding-right: 5px;
+            font-size: 20px;
+        }
+
+        .nav-main {
+			background: #222;
+            z-index: 10;
+            display: flex;
+          opacity: 0.8;
+		  filter: alpha(opacity=80);
+            width: 100%;
+			height: 60px;
+            min-width: 1024px;
+        }
+		#right{
+			    position: absolute;
+			    top: 10%;
+			    left: 25%;
+			    width: 50%;
+			    height: 100%;
+		}
+	
+.video_button{
+            width: 10%;
+            height: 5%;
+            margin: auto;
+            float: left;
+            z-index:1100;
+            left: 45%;
+            top: 47.5%;
+            /*width: 320.91px;*/
+            /*height: 95.238px;*/
+            position: absolute;
+        }
+        .video_button > button{
+            width: 170px;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            font-size: 21px;
+        }
+        /*上传文件*/
+  .login-form-group-img .sc{
+      position:relative;
+      display: inline-block;
+      width: 128px;
+      height: 37px;
+      background-color: #006cbc;
+      border-radius: 2px;
+      color: #fff;
+      	    white-space: nowrap;
+      line-height: 38px;
+  text-align: center;
+      	    font-size: 14px;
+      border: 1px solid transparent;
+
+  }
+  .login-form-group-img input[type="file"]{
+      opacity: 0;
+      position: absolute;
+      width: 128px;
+      height: 37px;
+      left: 0;
+  }
+      /*.login-form-group-img  .myBtn{*/
+/*	padding:5px;*/
+/*	font-size: inherit;*/
+/*	display: inline-block;*/
+/*	    height: 38px;*/
+/*	    line-height: 38px;*/
+/*	    padding: 0 18px;*/
+/*	    border: 1px solid transparent;*/
+/*	    background-color: #006cbc;*/
+/*	    color: #fff;*/
+/*	    white-space: nowrap;*/
+/*	    text-align: center;*/
+/*	    font-size: 14px;*/
+/*	    border-radius: 2px;*/
+/*}*/
+.login-form-group-img .myBtn:hover{
+	background-color: #074f92;
+}
+
+.login-form-group-si{
+	display: inline-block;
+	float: left;
+	    padding: 0;
+	    margin: 0 0 23px 0;
+	    width: 44%;
+	    font-size: 1em;
+	    font-weight: 400;
+		
+	    outline: none;
+}
+.login-form-group-si .text-info-si{
+	/* margin-right:0.5em; */
+	padding:3px 0;
+	font-size: 1.2em;
+}
+.login-form .login-form-group-si input[type="text"],.login-form .login-form-group-si input[type="number"] {
+    padding: 6px 6px 6px 10px;
+	border-radius: 4px;
+	width: 50%;
+	font-size: 14px;
+    color: #fff;
+	background: rgb(0 77 151 / 57%);
+}
+.left_top{
+	float: left;
+	width: 82%;
+}
+.more_line ul li{
+	float: left;
+	margin: 20px 5px;
+	}
+	.more_line .text-info-si{
+		
+	}
+
+	
+
+.login-form-group-si .layui-select-title select {
+    padding: 4px 0;
+    z-index: 899;
+    min-width: 42%;
+    border: 1px solid #01c4fe;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 12%);
+    box-sizing: border-box;
+	font-size:11pt;
+    color: #fff;
+		background-color: rgb(0 77 151 / 57%);
+}
+.footer{
+ 
+	    width: 100%;
+		height: 54px;
+		line-height: 54px;
+	    position: absolute;
+		bottom: 0;
+	    text-align: center;
+	    font-size: 16px;
+	    background: #333333;
+	    color: #fff;
+	    overflow: hidden;
+	
+}
+/*项目成就*/
+  .pic{
+      width:164px;
+      height: 180px;
+      margin: 150px auto 0;
+      position: relative;
+      /*transform 旋转元素*/
+      transform-style:preserve-3d;
+      transform:perspective(800px) rotateX(-10deg) rotateY(0deg);
+
+  }
+
+
+  .pic img{
+
+      position: absolute;
+      width: 100%;
+      height: 88%;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #fff;
+      /*倒影的设置*/
+      -webkit-box-reflect:below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 50%,rgba(0,0,0,.5) 100%);
+  }
+  .pic p{
+      width: 1200px;
+      height: 1200px;
+      background: -webkit-radial-gradient(center center,600px 600px,rgba(255,255,255,.5),rgba(0,0,0,0));
+      position: absolute;
+      top:100%;left:50%;
+      margin-top: -600px;
+      margin-left: -600px;
+      border-radius:600px;
+      transform:rotateX(90deg);
+  }

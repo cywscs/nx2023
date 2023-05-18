@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大学生启航科技开发公司</title>
+    <link rel="stylesheet" href="/css/demo.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/demo.css" rel="stylesheet" type="text/css">
+    <link href="css/loaders.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet">
+    <style>
+        html,body{
+            height: 100%;
+        background-image: url("/image/Starry.jpg");
+        background-color: #242645; color: #fff;
+    }
+        .tijiaochenggong{
+        position: relative;
+        top: 25%;
+            user-select: none;
+            line-height: 284px;
+            /* margin-top: 98px; */
+            border-radius:10px;
+            text-align: center;
+            font-size: 2rem;
+            width: 800px;
+            height: 284px;
+            margin: 0 auto;
+            background-color: #003c7ca1;
+        }
+    </style>
+</head>
+
+<body >
+<div class="tijiaochenggong">报名信息提交成功!
+<!--    <a href="javascript:window.opener=null;window.open('','_self');window.close();">关闭</a>-->
+    <form action="/down" method="post" >
+        <style>
+            input:hover{
+                background: rgb(53,192,242) !important;
+                transition: 0.5s all;
+                -webkit-transition: 0.5s all;
+                -moz-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+            }
+        </style>
+        <input onclick='location.href=("index.html")' style="background-color: #0c296e;width: 100px;border-radius: 15px;color: white; height: 40px;cursor:pointer;margin-right: 50px;" type="button" value="返回主页">
+        <input style="margin: 0 auto;background-color: #0c296e;width: 100px;border-radius: 15px;color: white; height: 40px;cursor: pointer;" type="submit" value="下载报名表">
+    </form>
+</div>
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    // 点击事件
+    var a_idx = 0;
+    jQuery(document).ready(function(html) {
+        $("html").click(function(e) {
+            var a = new Array("扬帆♥","♥启航")
+            const qk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+            const zk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+            const hk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+
+            //从颜色库选取一种颜色;当然这是数组的方式;随机性
+            var q = Math.floor(Math.random() * qk.length);
+            var z = Math.floor(Math.random() * zk.length);
+            var h = Math.floor(Math.random() * hk.length);
+            var $i = $("<span />").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999 ,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "font-family":"黑体",
+                "font-size":"20px",
+                "color": "#" + qk[q] + zk[z] + hk[h],
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
+        });
+    });
+</script>
+</body>
+</html>

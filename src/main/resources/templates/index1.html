@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>没错，这是主页！</h1>
+<div class="login tx login-form">
+    <div class="login_title">
+        <h2>报 名 申 请</h2>
+    </div>
+    <form action="/save" enctype="multipart/form-data" method="post">
+        <!-- 左上部分 -->
+        <div class="left_top">
+            <div class="login-form-group">
+                <label class="text-info" style="margin-left: 26px;">姓名:</label><label>
+                <input type="text"
+                       name="username"
+                       placeholder="请输入姓名"
+                       required>
+            </label></div>
+            <div class="login-form-group">
+                <label class="text-info" style="margin-left: 27px;">学号:</label><label for="num10"></label><input
+                    type="text" name="id"
+                    id="num10" placeholder="请输入学号"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                    required>
+            </div>
+            <div class="login-form-group-si">
+                <label class="text-info-si">专业班级:</label><label>
+                <input type="text" name="majors" placeholder="请输入专业班级"
+                       required>
+            </label>
+            </div>
+            <div class="login-form-group">
+                <label class="text-info" style="width: 22%;margin-left: 27px;">性别：</label>
+                <span style="display:block; margin: 3px 0;font-size: 1.2em;">
+                            <input type="radio" name="sex" value="男" checked="checked">男
+						    <input type="radio" name="sex" value="女">女
+                        </span>
+            </div>
+
+            <div class="login-form-group-si">
+                <label class="text-info-si">学分绩点:</label>
+                <input type="number" placeholder="请输入学分绩点" name="gpa" required>
+            </div>
+
+            <div class="login-form-group-si" style="width: 44%;">
+                <label class="text-info-si">联系电话:</label><input type="text" name="tel" placeholder="请输入联系方式"
+                                                                    required>
+            </div>
+            <div class="login-form-group ">
+                <label class="text-info" style="margin-left: 26px;">邮箱:</label>
+                <input type="email" name="email" placeholder="请输入邮箱" required>
+            </div>
+            <div class="login-form-group-si ">
+                <label class="text-info-si">意向部门:</label>
+                <div class="layui-select-title">
+                    <select name="department" id="department">
+                        <option value=" ">请选择</option>
+                        <option value="开发部">开发部</option>
+                        <option value="市场部">市场部</option>
+                        <option value="行政部">行政部</option>
+                        <option value="人力资源部">人力资源部</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- left-top结束 -->
+        <div class="login-form-group-img">
+            <span><img src="" id="img" style="width: 121px"></span>
+            <span class="sc">点击上传个人照片<input type="file" name="file" id="reportXML"
+                                                    onchange="upload(this)"></span>
+        </div>
+        <!-- 上传个人照片结束 -->
+        <div class="more_line">
+            <ul>
+                <li><label class="text-info-si">获奖情况:</label><textarea name="awards" placeholder="请输入内容"
+                                                                           required></textarea></li>
+                <li><label class="text-info-si">个人简历:</label><textarea name="text" placeholder="请输入内容"
+                                                                           required></textarea></li>
+                <li><label class="text-info-si" style="margin-left:-60px;">加入启航的原因:</label><textarea name="why"
+                                                                                                            placeholder="请输入内容"
+                                                                                                            required></textarea>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tj">
+            <input type="submit" value="提交申请">
+        </div>
+    </form>
+</div>
+</body>
+</html>

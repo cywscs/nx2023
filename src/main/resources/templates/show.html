@@ -1,0 +1,329 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>启航科技开发公司纳新</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/demo.css" rel="stylesheet" type="text/css">
+    <link href="css/loaders.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet">
+
+    <link rel="shortcut icon"
+          href="favicon.ico"
+          type="image/x-icon"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/naxin.js"></script>
+    <script type="text/javascript" src="js/stopExecutionOnTimeout.js"></script>
+    <script type="text/javascript" src="js/Particleground.js"></script>
+    <script type="text/javascript" src="js/jquery.mockjax.js"></script>
+</head>
+<body>
+
+
+<!--<form th:action="@{/save}" enctype="multipart/form-data" method="post">-->
+<!--    <input>-->
+<!--    <input type="file" name="file">-->
+<!--    <input type="submit" value="上传">-->
+<!--</form>-->
+<script type="text/javascript">
+    var xm, id
+
+    function a2() {
+        xm = $("#f1").val();
+        id = $("#num10").val();
+    }
+
+    function a1() {
+        // alert($("#Name").val())
+        $.ajax({
+            type: "post",
+            url: "/down",
+            //contentType: "application/json;charset=utf-8",
+            dataType: "text",
+            data:
+                {
+                    // "xm": JSON.stringify(xm),
+                    "id": id,
+                    "name": xm
+                }
+        })
+    }
+</script>
+<div class="main_sign_up" style="color: black !important;">
+    <video class="video-react-video" src="./0-1000.webm"
+           preload="auto"
+           autoplay="true"
+           muted="false"
+           loop="true">
+    </video>
+    <div class="login tx login-form">
+        <div class="login_title">
+            <h2>报 名 申 请</h2>
+        </div>
+        <form action="/save" enctype="multipart/form-data" onsubmit="return check1()" method="post" target="_blank">
+            <!-- 左上部分 -->
+            <div class="left_top">
+                <div class="login-form-group">
+                    <label class="text-info" style="margin-left: 26px;" for="name">姓名:</label><input id="f1" type="text"
+                                                                                                       name="username"
+                                                                                                       placeholder="请输入姓名"
+                                                                                                       required></div>
+                <div class="login-form-group">
+                    <label class="text-info" style="margin-left: 27px;">学号:</label><input type="text" name="id"
+                                                                                            id="num10" placeholder="请输入学号"
+
+                                                                                            required>
+                </div>
+                <div class="login-form-group-si">
+                    <label class="text-info-si">专业班级:</label><input type="text" name="majors" placeholder="请输入专业班级"
+                                                                        required>
+                </div>
+                <div class="login-form-group">
+                    <label class="text-info" style="width: 22%;margin-left: 27px;">性别：</label>
+                    <span style="display:block; margin: 3px 0;font-size: 1.2em;">
+                            <input type="radio" name="sex" value="男" checked="checked">男
+						    <input type="radio" name="sex" value="女">女
+                        </span>
+                </div>
+
+                <div class="login-form-group-si">
+                    <label class="text-info-si">学分绩点:</label>
+                    <input type="text" id="jidian" placeholder="请输入学分绩点" name="gpa" required>
+                </div>
+                <!--                /[^0-9^\.]/-->
+                <div class="login-form-group-si" style="width: 44%;">
+                    <label class="text-info-si">联系电话:</label><input type="text" id="phone" name="tel" placeholder="请输入联系方式"
+                                                                        required>
+                </div>
+                <div class="login-form-group ">
+                    <label class="text-info" style="margin-left: 26px;">邮箱:</label>
+                    <input type="email" id="email" name="email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="login-form-group-si ">
+                    <label class="text-info-si">意向部门:</label>
+                    <div class="layui-select-title">
+                        <select name="department" id="department">
+                            <option value=" ">请选择</option>
+                            <option value="开发部">开发部</option>
+                            <option value="市场部">市场部</option>
+                            <option value="行政部">行政部</option>
+                            <option value="人力资源部">人力资源部</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- left-top结束 -->
+            <div class="login-form-group-img">
+                <span><img src="" id="img" style="width: 121px"></span>
+                <span class="sc">点击上传个人照片<input type="file" name="file" id="reportXML" onchange="upload(this)"></span>
+            </div>
+            <!-- 上传个人照片结束 -->
+            <div class="more_line">
+                <ul>
+                    <li><label class="text-info-si">获奖情况:</label><textarea name="awards" placeholder="请输入内容"
+                                                                               required></textarea></li>
+                    <li><label class="text-info-si">个人简历:</label><textarea name="text" placeholder="请输入内容"
+                                                                               required></textarea></li>
+                    <li><label class="text-info-si" style="margin-left:-60px;">加入启航的原因:</label><textarea name="why"
+                                                                                                                placeholder="请输入内容"
+                                                                                                                required></textarea>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tj" style="padding-right: 90px;">
+                <input type="button" onclick='location.href=("index.html")' value="返回主页">
+                <input style="margin-left: 35px;!important;" type="submit" value="提交申请">
+            </div>
+
+        </form>
+
+
+    </div>
+    <iframe src="zhuye.html" scrolling="no" class="ifr"></iframe>
+    <iframe src="wlzw.html" class="ifrwl" scrolling="no"></iframe>
+    <iframe src="xmcj.html" class="ifrcj" scrolling="no"></iframe>
+    <iframe src="bmjs.html" class="ifrjs" scrolling="no" style="display: none"></iframe>
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+
+    // 点击事件
+    var a_idx = 0;
+    jQuery(document).ready(function (html) {
+
+        $("html").click(function (e) {
+            var a = new Array("扬帆♥", "♥启航")
+            const qk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+            const zk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+            const hk = new Array('00', '11', '22', '33', '44', '55', '66', '77', '88', '99',
+                'aa', 'bb', 'cc', 'dd', 'ee', 'ff');
+
+            //从颜色库选取一种颜色;当然这是数组的方式;随机性
+            var q = Math.floor(Math.random() * qk.length);
+            var z = Math.floor(Math.random() * zk.length);
+            var h = Math.floor(Math.random() * hk.length);
+            var $i = $("<span />").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "font-family": "黑体",
+                "font-size": "20px",
+                "color": "#" + qk[q] + zk[z] + hk[h],
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function () {
+                    $i.remove();
+                });
+        });
+    });
+</script>
+<script src="js/daohang.js"></script>
+<!--提交判断-->
+<script>
+    function check1() {
+        function trim(s) {
+            return s.replace(/(^\s*)|(\s*$)/g, "")
+        }
+
+        var y_pwd = trim($("#num10").val());
+        var jidian = $("#jidian").val();
+        var name = $("#f1").val();
+        // console.log($("#num10").val())
+        var fileInput = $('#reportXML').get(0).files[0];
+        var options = $("#department option:selected").text();
+        var email=$("#email").val();
+        var phone=$("#phone").val();
+        console.log(options);
+        var reg1 = /^2022[0-9]{6}$/;
+        var reg2 = /^[0-4]{1}\.{0,1}[0-9]{0,2}$/;
+        var reg3=/^([\u4e00-\u9fa5]){2,4}$/;
+        var reg4= /^\w{6,18}@\w{2,6}\.(com)|(net)$/;
+        var phoneReg = /^1[3456789]\d{9}$/;
+        if (!reg3.test(name)) {
+            alert("请输入正确的名字")
+            return false;
+        }
+
+        if (reg1.test(y_pwd)) {
+        } else {
+            alert("学号不符合规范，请认真填写")
+            return false;
+        }
+        if (!reg2.test(jidian)) {
+            alert("绩点为无效绩点，请重新填写")
+            return false;
+        }
+        if (!phoneReg.test(phone)) {
+            alert("请输入正确的联系方式")
+            return false;
+        }
+        if (!reg4.test(email)) {
+            alert("请输入正确的邮箱地址，确保后期收到一面通知")
+            return false;
+        }
+
+        if (y_pwd)
+            if (y_pwd.length == 10 && fileInput && options != "请选择") {
+                console.log("cg")
+                alert("提交成功");
+                return true;
+            } else if (!fileInput) {
+                alert("请选择上传个人照片！");
+                return false;
+            } else if (options == "请选择") {
+                alert("请选择意向部门");
+                return false;
+            } else {
+                alert("学号不足或超过10位,请重新输入");
+                return false;
+            }
+
+    }
+</script type="text/javascript">
+
+<!--//粒子背景特效-->
+<script type="text/javascript">
+    // $('.main_sign_up').particleground({
+    //     dotColor: '#E8DFE8',
+    //     lineColor: '#133b88'
+    // });
+    $('input[name="pwd"]').focus(function () {
+        $(this).attr('type', 'password');
+    });
+    $('input[type="text"]').focus(function () {
+        $(this).prev().animate({
+            'opacity': '1'
+        }, 200);
+    });
+    //点击文本框后字体会变淡，比如姓名，学号等等
+    /*$('input[type="text"],input[type="password"]').blur(function () {
+        $(this).prev().animate({
+            'opacity': '.5'
+        }, 200);
+    });*/
+    $('input[name="login"],input[name="pwd"]').keyup(function () {
+        var Len = $(this).val().length;
+        if (!$(this).val() == '' && Len >= 5) {
+            $(this).next().animate({
+                'opacity': '1',
+                'right': '30'
+            }, 200);
+        } else {
+            $(this).next().animate({
+                'opacity': '0',
+                'right': '20'
+            }, 200);
+        }
+    });
+</script>
+<!--视频播放-->
+<script type="text/javascript">
+    var btn = document.getElementsByClassName("homeVideo")[0];
+    var nxo = document.getElementsByClassName("nxo")[0];
+    var bar = document.getElementsByClassName("barrier")[0];
+    var htm = document.getElementsByTagName("body")[0];
+    var bc = document.getElementsByClassName("barrier_black")[0];
+    btn.addEventListener("ended", function () {
+        nxo.remove()
+        btn.remove()
+        bar.remove()
+        bc.remove()
+        htm.style.overflow = "inherit"
+    });
+
+
+</script>
+<script>
+    $("#mainframe").load(function () {
+        var mainheight = $(this).contents().find(" body").height() + 30;
+        $(this).height(mainheight);
+    });
+</script>
+<style>
+    .video-react-video{
+       min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+    }
+</style>
+</html>
+

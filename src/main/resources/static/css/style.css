@@ -1,0 +1,640 @@
+body .login {
+    box-shadow: -15px 15px 15px rgb(132 111 236 / 70%);
+    opacity: 1;
+    top: 20px;
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.25, 0.265, 0.85);
+    -webkit-transition-property: -webkit-transform, opacity, box-shadow, top, left;
+    transition-property: transform, opacity, box-shadow, top, left;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transform-origin: 161px 100%;
+    -ms-transform-origin: 161px 100%;
+    transform-origin: 161px 100%;
+    -webkit-transform: rotateX(
+            0deg
+    );
+    transform: rotateX(
+            0deg
+    );
+    position: relative;
+    width: 1000px;
+    /* border-top: 2px solid #D8312A; */
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px 40px 40px 40px;
+    background: #35394a;
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #35394a), color-stop(100%, rgb(0, 0, 0)));
+    background: -webkit-linear-gradient(
+            221deg, rgb(127 222 208 / 65%) 0%, rgb(190 166 122 / 80%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(53 57 74 / 65%) 0%,', endColorstr='rgb(0, 0, 0)', GradientType=1);
+    border-radius: 5px;
+}
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+nav ul,
+nav li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* start editing from here */
+a {
+    text-decoration: none;
+}
+
+.txt-rt {
+    text-align: right;
+}
+
+/* text align right */
+.txt-lt {
+    text-align: left;
+}
+
+/* text align left */
+.txt-center {
+    text-align: center;
+}
+
+/* text align center */
+.float-rt {
+    float: right;
+}
+
+/* float right */
+.float-lt {
+    float: left;
+}
+
+/* float left */
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+/* clear float */
+.pos-relative {
+    position: relative;
+}
+
+/* Position Relative */
+.pos-absolute {
+    position: absolute;
+}
+
+/* Position Absolute */
+.vertical-base {
+    vertical-align: baseline;
+}
+
+/* vertical align baseline */
+.vertical-top {
+    vertical-align: top;
+}
+
+/* vertical align top */
+nav.vertical ul li {
+    display: block;
+}
+
+/* vertical menu */
+nav.horizontal ul li {
+    display: inline-block;
+}
+
+/* horizontal menu */
+img {
+    max-width: 100%;
+}
+
+/*end reset*/
+body {
+
+    background: url('../images/1.jpg') no-repeat 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    text-align: center;
+    margin-top: 4em;
+}
+
+.header h1 {
+    font-size: 3.5em;
+    color: #fff;
+    font-weight: 400;
+}
+
+.main-section {
+    width: 40%;
+    margin: 3em auto 0;
+    text-align: center;
+}
+
+.login-form {
+    padding: 2em 3em;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+
+}
+
+.login-form h2 {
+
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: black;
+    user-select: none;
+    text-align: center;
+    margin-bottom: 1em;
+
+}
+
+.login-form form {
+    margin-top: 2em;
+    padding-left: 50px;
+
+}
+
+.login-form .login-form-group input[type="text"], .login-form .login-form-group input[type="email"] {
+    padding: 6px 6px 6px 10px;
+    color: #fff;
+    width: 50%;
+    font-size: 14px;
+    background: rgb(0 77 151 / 57%);
+    border-radius: 4px;
+    border: 1px solid #fff;
+
+}
+
+.login-form .login-form-group {
+    float: left;
+    padding: 0;
+    margin: 0 0 25px 0;
+    width: 44%;
+    font-size: 1em;
+    font-weight: 400;
+    outline: none;
+    display: inline-block;
+    position: relative;
+
+}
+
+.login-form .login-form-group-img {
+    display: inline-block;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+}
+
+.login-form .text-info {
+    width: 19%;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: right;
+    /* 	margin-right: 0.5em; */
+    padding: 3px 0;
+    display: inline-block;
+}
+
+.more_line {
+    width: 100%;
+    height: 1px;
+}
+
+.login-form label {
+    float: left;
+    font-size: 1.2em;
+    opacity: 1;
+    color: #000;
+}
+
+.login-form form {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.login-form form textarea {
+    width: 600px;
+    font-size: 1.2em;
+    color: #fff;
+    border: 1px solid #0071bc;
+    outline: none;
+    float: left;
+    background: rgb(0 77 151 / 45%);
+    height: 100px;
+    min-height: 100px;
+    line-height: 20px;
+    padding: 6px 10px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.login-form p {
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: left;
+    line-height: 1.8em;
+    color: #91a0b5;
+}
+
+.login-form .tj {
+    text-align: center;
+}
+
+.login-form input[type="submit"], .login-form input[type="button"] {
+    font-size: 1em;
+    padding: .8em 1em;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background: #001d50;
+    color: #fff;
+    cursor: pointer;
+    width: 24%;
+    margin-top: 20px;
+}
+
+.forgot {
+    font-size: .85em;
+    color: #777;
+}
+
+.login-form input[type="submit"]:hover {
+    background: #002696;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.login-form button[type="button"]:hover, .login-form input[type="button"]:hover {
+    background: #002696;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+
+/**responsive*/
+@media (max-width: 1440px) {
+    .main-section {
+        width: 44%;
+    }
+}
+
+/*-- agileits --*/
+@media (max-width: 1366px) {
+    .main-section {
+        width: 46%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .main-section {
+        width: 62%;
+    }
+
+    .header h1 {
+        font-size: 2.8em;
+    }
+
+    .header {
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .login-form h2 {
+        font-size: 2.4rem;
+    }
+
+    .login-form h4 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-section {
+        width: 65%;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-section {
+        width: 79%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        width: 82%;
+    }
+}
+
+@media (max-width: 736px) {
+    .main-section {
+        width: 86%;
+    }
+}
+
+@media (max-width: 667px) {
+    .main-section {
+        width: 73%;
+    }
+
+    /*-- w3layouts --*/
+    .login-form .text-info {
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    .login-form form input[type="text"],
+    .login-form form button[type="button"],
+    .login-form form textarea {
+        width: 94%;
+        border-radius: 2px;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .main-section {
+        width: 75%;
+    }
+
+    .header h1 {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-section {
+        width: 95%;
+        margin: 2em auto 0
+    }
+
+    .header {
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .login-form {
+        padding: 2em 2em;
+    }
+
+    .login-form h2 {
+        font-size: 1.4em;
+    }
+
+    .login-form .text-info {
+        font-size: 0.9em;
+    }
+
+    .login-form input[type="submit"], .login-form input[type="button"] {
+        font-size: 0.95em;
+    }
+
+    .login-form button[type="button"] {
+        font-size: 0.95em;
+    }
+
+    .login-form form input[type="text"],
+    .login-form form button[type="button"]
+    .login-form form textarea {
+        width: 95%;
+    }
+
+    /*-- agileits --*/
+    .login-form p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 414px) {
+    .login-form input[type="submit"], .login-form input[type="button"] {
+        width: 38%;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .login-form form input[type="text"],
+    .login-form form textarea {
+        width: 93.5%;
+    }
+
+
+}
+
+@media (max-width: 384px) {
+    .header h1 {
+        font-size: 2.3em;
+    }
+}
+
+@media (max-width: 375px) {
+    .login-form input[type="submit"]
+    .login-form button[type="button"] {
+        width: 55%;
+    }
+
+    .login-form p {
+        line-height: 1.5em;
+    }
+
+    .login-form h2 {
+        font-size: 1.2em;
+    }
+
+    .login-form h4 {
+        font-size: 1em;
+    }
+
+    .login-form .text-info {
+        padding-bottom: .5em;
+    }
+
+    .login-form form input[type="text"],
+    .login-form form button[type="button"]
+    .login-form form textarea {
+        width: 94.5%;
+        margin-right: 3%;
+    }
+
+    .login-form form {
+        margin-top: 1em;
+    }
+
+    .login-form input[type="submit"] {
+        margin: 0;
+    }
+
+    /*-- w3layouts --*/
+    .login-form .login-form-group {
+        padding: 0;
+        margin: 0px 0 10px 0;
+    }
+
+    .social-icons {
+        margin-top: 1em;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .login-form form input[type="text"],
+    .login-form form textarea {
+        width: 91.5%;
+    }
+}
